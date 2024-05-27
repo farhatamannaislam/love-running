@@ -1,5 +1,6 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
@@ -19,7 +20,7 @@ body {
 
 
 h1,
-h2, 
+h2,
 h3 {
 
     font-family: 'Oswald', sans-serif;
@@ -32,7 +33,7 @@ h3 {
 
 }
 
-.hidden-heading{
+.hidden-heading {
     display: none;
 }
 
@@ -61,7 +62,7 @@ header a {
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -142,8 +143,8 @@ main {
 
 
 
-#cover-text > h2, 
-#cover-text > h3 {
+#cover-text>h2,
+#cover-text>h3 {
 
     color: #ffffff;
 
@@ -258,6 +259,24 @@ main {
 
 }
 
+
+/* Gallery page */
+
+#photos img {
+
+    width: 100%;
+    line-height: 1em;
+
+}
+
+
+
+#photos {
+
+    line-height: 0;
+
+}
+
 /* Footer */
 #social-networks {
     text-align: center;
@@ -274,8 +293,23 @@ main {
 }
 
 
+
+/* Media query: large or landscape phones (576px and up) */
+
+@media screen and (min-width: 576px) {
+
+    #photos {
+
+        column-count: 2;
+        column-gap: 0;
+
+    }
+
+}
+
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
     /* Header */
     nav {
         display: block;
@@ -289,7 +323,7 @@ main {
         display: flex;
     }
 
-    #menu > li {
+    #menu>li {
         padding-left: 1rem;
     }
 
@@ -308,11 +342,11 @@ main {
         /* Push main content down to accommodate larger header */
         margin-top: 79px;
     }
+
     /* Hero image */
     #cover-text {
 
         width: 300px;
-
         right: 50px;
     }
 
@@ -324,33 +358,41 @@ main {
     #benefits-mental {
 
         display: flex;
-
         flex-direction: column;
-
         width: 100%;
-
     }
-
-
 
     #benefits-physical>div,
 
     #benefits-mental>div {
 
         width: 75%;
+    }
 
+    /* Gallery */
+    #photos {
+        column-count: 3;
     }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover{
+    #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+
+
+    /* Gallery */
+
+    #photos {
+
+        column-count: 4;
+
     }
 }
 
 
-@media screen and (min-width: 1200px) {    
+@media screen and (min-width: 1200px) {
 
     /* Reasons section */
 
@@ -364,7 +406,7 @@ main {
 
 
 
-    #benefits > div {
+    #benefits>div {
 
         flex: 1;
 
@@ -375,7 +417,6 @@ main {
     #benefits-image {
 
         order: 0
-
     }
 
 
@@ -388,7 +429,7 @@ main {
 
 
 
-    #benefits-mental > div {
+    #benefits-mental>div {
 
         align-self: flex-start;
 
@@ -396,7 +437,7 @@ main {
 
 
 
-    #benefits-physical > div {
+    #benefits-physical>div {
 
         align-self: flex-end;
 
